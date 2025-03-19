@@ -18,7 +18,7 @@ const Menu = () => {
       : menuItems.filter((item) => item.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-gray-900 ">
       {/* Header Section */}
 
       <section className="relative h-[60dvh] max-[450px]:h-[45dvh] overflow-hidden">

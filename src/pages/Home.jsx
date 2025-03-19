@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-gray-900 ">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center bg-gray-500/50">
         <div className="absolute inset-0">
@@ -104,7 +104,7 @@ const Home = () => {
                   alt="Our Story"
                   className="rounded-lg shadow-xl"
                 />
-                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-[#facdb2] rounded-full flex items-center justify-center">
+                <div className="absolute 2xl:right-22 2xl:-bottom-6 -right-10 -bottom-6 max-lg:-right-6 w-24 h-24 max-lg:w-16 max-lg:h-16 max-md:w-24 max-md:h-24 aspect-square bg-[#facdb2] rounded-full flex items-center justify-center">
                   <span className="text-4xl font-bold text-gray-900 overflow-hidden rounded-full">
                     <img
                       src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-cartoon-cute-little-girl-drinking-tea-with-commercial-elements-versionmengcartoonlovelygirlchilddrinking-tea-png-image_4056876.jpg"

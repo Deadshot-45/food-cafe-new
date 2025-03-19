@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="min-h-screen w-full bg-[#6e6876]">
+    <div className="min-h-screen w-full bg-[#6e6876] ">
       {/* Top Content Section */}
       <section className="relative  h-[60dvh] max-[450px]:h-[45dvh]  overflow-hidden">
         <div className="absolute inset-0">
