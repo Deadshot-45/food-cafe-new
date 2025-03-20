@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import { DataContext } from "../Context/DataProvider";
 import menuItems from "../assests/assests";
 
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState("all");
+  const { setCart, cart } = useContext(DataContext);
 
   const categories = [
     { id: "all", name: "All" },
@@ -16,6 +18,23 @@ const Menu = () => {
     activeCategory === "all"
       ? menuItems
       : menuItems.filter((item) => item.category === activeCategory);
+
+  const handleOrder = (order) => {
+    const item = cart.find((item) => item.id === order.id);
+    if (item) {
+      const newCart = cart.map((item) =>
+        item.id === order.id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+      return setCart(newCart);
+    }
+
+    return setCart([...cart, { ...order, quantity: 1 }]);
+    // console.log(order);
+  };
+
+  useEffect(() => {
+    console.log(cart);
+  }, [cart]);
 
   return (
     <div className="min-h-screen bg-gray-900 ">
@@ -39,7 +58,9 @@ const Menu = () => {
         </div>
 
         <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center z-50">
-          <h1 className="text-5xl max-[450px]:text-4xl font-bold text-white mb-4">Menu</h1>
+          <h1 className="text-5xl max-[450px]:text-4xl font-bold text-white mb-4">
+            Menu
+          </h1>
           <div className="w-20 h-1 bg-[#facdb2]"></div>
         </div>
       </section>
@@ -92,7 +113,10 @@ const Menu = () => {
                   <p className="text-gray-300 mb-4 h-6 overflow-hidden">
                     {item.description}
                   </p>
-                  <button className="w-full bg-[#facdb2] text-gray-900 py-2 rounded font-semibold hover:bg-[#f8c4a3] transition-colors cursor-pointer">
+                  <button
+                    onClick={() => handleOrder(item)}
+                    className="w-full bg-[#facdb2] text-gray-900 py-2 rounded font-semibold hover:bg-[#f8c4a3] transition-colors cursor-pointer"
+                  >
                     Order Now
                   </button>
                 </div>
