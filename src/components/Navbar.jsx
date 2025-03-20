@@ -4,7 +4,6 @@ import { FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
 
   return (
     <nav className="bg-gray-900 shadow-lg fixed w-full z-[999]">
@@ -137,6 +136,12 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Contact
+              </NavLink>
+              <NavLink
+                to="/cart"
+                className="block px-3 py-2 hover:text-primary transition-colors"
+              >
+                Cart
               </NavLink>
             </div>
           </div>
