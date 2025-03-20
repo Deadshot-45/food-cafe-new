@@ -1,14 +1,19 @@
-import { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  
 
   return (
     <nav className="bg-gray-900 shadow-lg fixed w-full z-[999]">
       <div className="container mx-auto px-4 text-white">
         <div className="flex justify-between items-center h-16">
-          <NavLink to="/" className="text-2xl font-bold text-primary text-[#facdb2]">
+          <NavLink
+            to="/"
+            className="text-2xl font-bold text-primary text-[#facdb2]"
+          >
             Food Cafe
           </NavLink>
 
@@ -63,6 +68,16 @@ const Navbar = () => {
               }
             >
               Contact
+            </NavLink>
+            <NavLink
+              to="/cart"
+              className={({ isActive }) =>
+                `${
+                  isActive ? "border-b text-[#facdb2]" : ""
+                } hover:text-primary transition-colors`
+              }
+            >
+              <FaShoppingCart className="text-xl" />
             </NavLink>
           </div>
 
