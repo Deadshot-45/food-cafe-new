@@ -20,7 +20,7 @@ const Cart = () => {
   }, [cart]);
 
   return (
-    <div className="max-w-7xl max-lg:w-[90%] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="max-w-7xl max-lg:w-[90%] mx-auto px-4 sm:px-6 lg:px-8 py-8 ">
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Main Content */}
         <div className="flex-1 space-y-8">

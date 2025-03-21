@@ -41,9 +41,7 @@ const MapProduct = ({ product, index }) => {
 
   return (
     <div
-      className={`flex items-center gap-6 p-4 bg-white rounded-lg shadow-sm card-mount delay-${
-        index % 5
-      }`}
+      className={`flex items-center gap-6 p-4 bg-white rounded-lg shadow-sm animate-fade-in`}
     >
       {/* Product Image */}
       <div className="max-sm:flex max-sm:flex-col gap-2">

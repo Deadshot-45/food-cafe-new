@@ -30,7 +30,7 @@ const FavorateProduct = ({ product, favorites, setFavorite, index }) => {
   };
 
   return (
-    <div className={`w-full flex items-center gap-6 p-4 bg-white rounded-lg shadow-sm border border-gray-200 card-mount delay-${index % 5}`}>
+    <div className={`w-full flex items-center gap-6 p-4 bg-white rounded-lg shadow-sm border border-gray-200 animate-fade-in`}>
       <div className="flex relative">
         {/* Product Image */}
         <Link to={`/product/${product.id}`} className="flex-shrink-0">
