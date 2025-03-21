@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="min-h-screen w-full bg-[#6e6876] ">
+    <div className="min-h-screen w-full bg-[#6e6876] overflow-x-hidden">
       {/* Top Content Section */}
       <section className="relative  h-[60dvh] max-[450px]:h-[45dvh]  overflow-hidden">
         <div className="absolute inset-0">
@@ -31,9 +31,9 @@ const About = () => {
       <section className="relative w-full py-20">
         <div className="">
           {/* Container 01 */}
-          <div className="w-full mx-auto h-[60dvh] flex justify-evenly items-center gap-9">
+          <div className="w-full mx-auto h-[60dvh] max-md:h-[40dvh] flex max-sm:flex-col justify-evenly items-center gap-9 max-sm:px-6">
             {/* Left Container */}
-            <div className="w-[30%] flex flex-col gap-5">
+            <div className="w-[30%] max-sm:w-full flex flex-col gap-5">
               <h2 className="text-3xl text-white">Our Story</h2>
               <p className="text-sm text-white leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
@@ -43,7 +43,7 @@ const About = () => {
             </div>
 
             {/* Right Container */}
-            <div className="w-[42%] h-[60dvh] relative">
+            <div className="w-[42%] max-sm:w-full h-[60dvh] max-md:h-[40dvh] relative">
               <img
                 src="https://websitedemos.net/cafe-library-02/wp-content/uploads/sites/729/2020/12/about-01-free-img.jpg"
                 alt="About Us"
@@ -53,9 +53,9 @@ const About = () => {
           </div>
 
           {/* Container 02 */}
-          <div className="relative flex flex-col items-center gap-8 mt-20 h-[100dvh]">
+          <div className="relative flex flex-col items-center gap-8 mt-20 h-[100dvh] max-sm:h-[50dvh]">
             {/* Container 02 Head */}
-            <div className="w-1/4 flex flex-col items-center gap-4 relative z-10">
+            <div className="max-sm:w-full flex flex-col items-center text-center gap-4 relative z-100 px-3">
               <h2 className="text-4xl text-white">Our Features</h2>
               <p className="text-sm text-white text-center">
                 Discover what makes our cafe special and unique.
@@ -63,7 +63,7 @@ const About = () => {
               <img
                 src="https://websitedemos.net/cafe-library-02/wp-content/uploads/sites/729/2020/12/bg-img-07-free-img.png"
                 alt="Icon"
-                className="absolute top-full left-[85%] w-[25dvw] h-[15dvh] z-50"
+                className="top-[140%] max-sm:top-[110%] max-md:top-[100%] left-[90%] max-sm:left-[65%] w-[20dvw]  max-sm:w-[30dvw] max-sm:h-[8dvh] h-[10dvh] absolute"
               />
             </div>
 
@@ -73,50 +73,50 @@ const About = () => {
               <img
                 src="https://websitedemos.net/cafe-library-02/wp-content/uploads/sites/729/2020/12/bg-img-06-free-img.png"
                 alt="Background"
-                className="absolute w-full h-[50dvh] object-cover"
+                className="absolute w-full h-[50dvh] max-sm:hidden object-cover"
               />
 
               {/* Top Images */}
-              <div className="w-3/5 mx-auto flex gap-6 relative z-10">
+              <div className="w-3/5 max-sm:w-[90%] max-md:w-[70%] mx-auto flex gap-6 max-sm:gap-2 relative z-10">
                 <img
                   src="https://websitedemos.net/cafe-library-02/wp-content/uploads/sites/729/2020/12/about-003-free-img.jpg"
                   alt="Feature 1"
-                  className="w-[35%] h-[55dvh] object-cover"
+                  className="w-[35%] h-[55dvh] max-sm:h-[20dvh] max-sm:w-[32%] object-cover"
                 />
                 <img
                   src="https://websitedemos.net/cafe-library-02/wp-content/uploads/sites/729/2020/12/about-004-free-img.jpg"
                   alt="Feature 2"
-                  className="w-[35%] h-[45dvh] pt-[5%] object-cover"
+                  className="w-[35%] h-[45dvh] max-sm:h-[13dvh] max-sm:w-[32%] pt-[5%] object-cover"
                 />
                 <img
                   src="https://websitedemos.net/cafe-library-02/wp-content/uploads/sites/729/2020/12/about-005-free-img.jpg"
                   alt="Feature 3"
-                  className="w-[35%] h-[calc(45dvh+5%)] pt-[5%] object-cover"
+                  className="w-[35%] h-[calc(45dvh+5%)] max-sm:h-[calc(30dvh+5%)] max-sm:w-[32%] pt-[5%] object-cover"
                 />
               </div>
 
               {/* Bottom Images */}
-              <div className="absolute top-[52dvh] w-[60%] left-1/6 flex justify-center gap-8 z-0">
-                <div className="w-[26%] h-[60dvh] flex flex-col">
+              <div className="absolute top-[52dvh] max-sm:top-45 w-[60%] max-md:w-[100%] max-md:left-10 max-sm:w-[90%] max-sm:left-6 left-1/6 mx-auto flex justify-center gap-8 max-sm:gap-2 z-0">
+                <div className="w-[26%] max-sm:w-[32%] h-[60dvh] flex flex-col">
                   <img
                     src="https://websitedemos.net/cafe-library-02/wp-content/uploads/sites/729/2020/12/about-008-free-img.jpg"
                     alt="Feature 4"
-                    className="w-full h-[33dvh] object-cover"
+                    className="w-full h-[33dvh] max-sm:h-[18dvh] object-cover"
                   />
                   <div className="w-full h-[20%]"></div>
                 </div>
-                <div className="w-[24%] h-[60dvh] relative top-[-40px] flex flex-col">
+                <div className="w-[24%] max-sm:w-[32%] h-[60dvh] relative top-[-40px] flex flex-col">
                   <img
                     src="https://websitedemos.net/cafe-library-02/wp-content/uploads/sites/729/2020/12/about-006-free-img.jpg"
                     alt="Feature 5"
-                    className="w-full h-[40dvh] object-cover"
+                    className="w-full h-[40dvh] max-sm:h-[20dvh] object-cover"
                   />
                 </div>
-                <div className="w-[20%] h-[60dvh] relative top-10 flex flex-col">
+                <div className="w-[20%] max-sm:w-[32%] h-[60dvh] relative top-10 flex flex-col">
                   <img
                     src="https://websitedemos.net/cafe-library-02/wp-content/uploads/sites/729/2020/12/about-007-free-img.jpg"
                     alt="Feature 6"
-                    className="w-[90%] h-[15dvh] object-cover"
+                    className="w-[90%] h-[15dvh] max-sm:h-[10dvh] object-cover"
                   />
                 </div>
               </div>
@@ -124,8 +124,8 @@ const About = () => {
           </div>
 
           {/* App Download Section */}
-          <div className="w-3/5 h-[50dvh] mx-auto mt-44 relative rounded-2xl bg-gray-900/70">
-            <img
+          <div className="w-3/5 max-sm:w-[90%] max-sm:h-[30dvh] h-[50dvh] mx-auto mt-44 relative rounded-2xl bg-gray-900/70">
+            <img 
               src="https://websitedemos.net/cafe-library-02/wp-content/uploads/sites/729/2020/12/bg-img-03-free-img.png"
               alt="App Download Background"
               className="absolute left-0 top-[30%] w-[30%] h-[70%] opacity-20"
@@ -139,7 +139,7 @@ const About = () => {
                 />
                 <div className="w-[10%] h-1 bg-white"></div>
               </div>
-              <div className="w-3/5 flex flex-col items-center gap-5">
+              <div className="w-3/5 flex flex-col items-center gap-5 max-sm:mt-4">
                 <h2 className="text-white font-bold text-center leading-relaxed">
                   Download Our App
                 </h2>
@@ -147,16 +147,16 @@ const About = () => {
                   Get the best experience with our mobile app.
                 </p>
               </div>
-              <div className="flex gap-6 mt-10">
+              <div className="flex gap-6 mt-10 max-sm:mt-0">
                 <img
-                  src="https://static.vecteezy.com/system/resources/thumbnails/022/101/128/small_2x/appstore-logo-transparent-free-png.png"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png"
                   alt="app store"
-                  className="w-[20dvw] h-[10dvh] object-cover"
+                  className="w-[10dvw] h-[12dvh] max-sm:w-[30dvw] max-sm:h-[15dvw] max-md:w-[20dvw] max-sm:p-3 p-4"
                 />
                 <img
-                  src="https://th.bing.com/th/id/R.a5c4a0ae0a1684828655ea8f51d7d190?rik=fO8ghz3gzTM4ow&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2fgoogle-play-icon-transparent%2fgoogle-play-icon-transparent-5.png&ehk=X6UOUpA%2bOVni4FAfy4Byq57nRBDLCnPCJ%2bi%2fYUt0OWc%3d&risl=&pid=ImgRaw&r=0"
+                  src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png?hl=hi"
                   alt="google store"
-                  className="w-[20dvw] h-[10dvh] object-cover"
+                  className="w-[10dvw] h-[12dvh] max-sm:w-[30dvw] max-sm:h-[15dvw] max-md:w-[20dvw]"
                 />
               </div>
             </div>
